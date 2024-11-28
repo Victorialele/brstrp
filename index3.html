@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Carousel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Mono+One&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="list3.css">
+    <style>
+        /* Добавьте свои стили здесь */
+        .accordion-button:not(.collapsed) {
+            background-color: var(--bs-warning); /* Используем цвет warning */
+            color: black; /* Изменяем цвет текста на черный */
+        }
+        .accordion-button:focus {
+            box-shadow: none; /* Убираем тени при фокусе */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md ">
+        <div class="container">
+            <a class="navbar-brand" href="index1.html">
+                <img src="images/Logo.svg" class="img-fluid" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index2.html">Desitnations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index3.html">Hotels</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Flights</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Bookings</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index4.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <form class="d-flex" role="search">
+                            <button class="btn btn-outline-success" type="submit">Sign up</button>
+                        </form>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            En
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">En</a></li>
+                            <li><a class="dropdown-item" href="#">Ru</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container hotel">
+        <h2>Top Hotels</h2>
+    </div>
+
+    <div class="container mt-5">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="hotels-tab" data-bs-toggle="tab" data-bs-target="#hotels" type="button" role="tab" aria-controls="hotels" aria-selected="true">Russia</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="flights-tab" data-bs-toggle="tab" data-bs-target="#flights" type="button" role="tab" aria-controls="flights" aria-selected="false">Bulgaria</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="destinations-tab" data-bs-toggle="tab" data-bs-target="#destinations" type="button" role="tab" aria-controls="destinations" aria-selected="false">England</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <!-- Hotels Tab -->
+            <div class="tab-pane fade show active" id="hotels" role="tabpanel" aria-labelledby="hotels-tab">
+                <h3>Russia</h3>
+                <ul class="list-group">
+                    <li class="list-group-item">The Radiance Hotel</li>
+                    <li class="list-group-item">The Magic Corner Hotel</li>
+                    <li class="list-group-item">The Golden Chapel Hotel</li>
+                </ul>
+            </div>
+            <!-- Flights Tab -->
+            <div class="tab-pane fade" id="flights" role="tabpanel" aria-labelledby="flights-tab">
+                <h3>Bulgaria</h3>
+                <ul class="list-group">
+                    <li class="list-group-item">Hotel 1</li>
+                    <li class="list-group-item">Hotel 2</li>
+                    <li class="list-group-item">Hotel 3</li>
+                </ul>
+            </div>
+            <!-- Destinations Tab -->
+            <div class="tab-pane fade" id="destinations" role="tabpanel" aria-labelledby="destinations-tab">
+                <h3>England</h3>
+                <ul class="list-group">
+                    <li class="list-group-item">Hotel 1</li>
+                    <li class="list-group-item">Hotel 2</li>
+                    <li class="list-group-item">Hotel 3</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        The Radiance Hotel
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Lorem ipsum dolor sit amet consectetur adipisicing.</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem labore iste molestias exercitationem inventore est culpa? Delectus ea sit commodi culpa voluptas! Sapiente nesciunt aspernatur ratione perspiciatis atque, illo accusamus?
+                        Mollitia corporis dolore culpa quis minus, voluptas laborum adipisci nam placeat dolorem dicta animi praesentium quasi? Culpa molestiae ea sit dignissimos corporis quod numquam molestias at, error impedit cupiditate doloremque?
+                        Ex aliquid tempora modi deleniti, explicabo molestiae iure sunt velit repudiandae tempore soluta doloremque nemo voluptates saepe laboriosam neque amet odit vero. Molestias aspernatur rem veniam sapiente, illum nostrum repellat?
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        The Magic Corner Hotel
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Lorem ipsum dolor sit amet.</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. In nulla debitis nostrum natus adipisci nesciunt illo ad placeat laborum officia? Quo reiciendis fugiat veritatis iste minima, illum explicabo reprehenderit provident.
+                        Rem sunt officia nihil alias explicabo magni eos dolore veniam deserunt? Est, rem. Omnis fugit laboriosam sit reprehenderit quo illum porro assumenda similique? Earum accusantium est cumque laborum optio ipsum?
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        The Golden Chapel Hotel
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Lorem ipsum dolor sit amet consectetur.</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum velit consectetur ipsum libero, explicabo illum excepturi sed optio. Cumque pariatur cupiditate minus inventore dolores quia suscipit. Placeat consequuntur fugiat atque.
+                        Porro, voluptate eveniet doloribus ipsam minus explicabo rem at natus sapiente asperiores? Est accusantium quos facere, aut sapiente dolorem exercitationem dolores, labore nihil cumque a eaque ad mollitia officia eveniet.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Jadoo.</h5>
+                    <p>Book your trip in minute, get full control for much longer.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Company</h5>
+                    <div class="footer-links">
+                        <a href="#">About</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Mobile</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact</h5>
+                    <div class="footer-links">
+                        <a href="#">Help/FAQ</a>
+                        <a href="#">Press</a>
+                        <a href="#">Affiliates</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h5>More</h5>
+                    <div class="footer-links">
+                        <a href="#">Airlinefees</a>
+                        <a href="#">Airline</a>
+                        <a href="#">Low fare tips</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                All rights reserved@jadoo.co
+            </div>
+        </div>
+      </footer>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

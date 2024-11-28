@@ -1,0 +1,190 @@
+@media (max-width: 768px) {
+    .navbar-nav .nav-item {
+        margin-right: 0;
+    }
+    .navbar-brand {
+      max-width: 40%;
+    }
+    .navbar-nav .nav-item {
+      margin-right: 0;
+    }
+  
+    .navbar-nav .nav-item .nav-link {
+        font-size: 12px;
+        line-height: 24px;
+    }
+
+    .footer-section h5 {
+        font-size: 1.125rem;
+    }
+  
+    .footer-section p {
+        font-size: 0.875rem;
+    }
+  
+    .footer-section .footer-links a {
+        font-size: 0.875rem;
+    }
+  
+    .footer-section .footer-bottom {
+        font-size: 0.75rem;
+    }
+}
+
+body{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3vw;
+    
+}
+.navbar {
+  margin-top: 3.5vw;
+  padding: 0;
+  margin-bottom: 1vw;
+}
+    
+.navbar-nav .nav-item {
+    margin-right: 3vw;
+}
+    
+    
+.navbar-nav .nav-item .nav-link {
+    color: #212832; 
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1vw;
+    line-height: 2.2vw;
+}
+    
+    
+    
+.navbar-toggler-icon{
+    color: #212832;
+}
+.navbar-toggler {
+    border-color: #000;
+    text-decoration: #000;
+}
+
+@media (max-width: 1024px) {
+    .navbar-brand {
+        margin-right: 6vw;
+    }
+
+    .navbar-nav .nav-item {
+        margin-right: 1.5vw;
+    }
+
+    .navbar-nav .nav-item .nav-link {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+}
+
+
+
+@media (max-width: 375px) {
+    .navbar-toggler {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.875rem;
+        line-height: 1;
+    }
+
+    .navbar-toggler-icon {
+        width: 1.25em;
+        height: 1.25em;
+    }
+    .navbar-brand img {
+    max-width: 40%;
+    }
+
+    .footer-section h5 {
+        font-size: 1rem;
+    }
+  
+    .footer-section p {
+        font-size: 0.50rem;
+    }
+  
+    .footer-section .footer-links a {
+        font-size: 0.50rem;
+    }
+  
+    .footer-section .footer-bottom {
+        font-size: 0.200rem;
+    }
+  
+  
+    .footer-section .col-md-3 {
+        margin-bottom: 20px;
+    }
+  
+    .footer-section .row {
+      flex-direction: column;
+    }
+
+    body {
+        font-size: 0.875rem;
+    }
+    .list-group-item {
+        font-size: 0.875rem;
+    }
+    .tab-pane .h3{
+        font-size: 0.675rem;
+    }
+
+    .accordion-button {
+        font-size: 0.875rem;
+    }
+    .accordion-body {
+        font-size: 0.575rem;
+    }
+}
+
+.navbar-brand {
+    margin-right: 18%;
+}
+.hotel {
+    text-align: center;
+    margin-top: 5vw;
+    margin-bottom: 3vw;
+}
+
+
+.footer-section {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+    margin-top: 8vw; /* Добавлен отступ сверху */
+  }
+  
+  .footer-section h5 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .footer-section p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section .footer-links a {
+    color: #6c757d;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section .footer-links a:hover {
+    color: #000;
+  }
+  
+  .footer-section .footer-bottom {
+    margin-top: 3%;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #6c757d;
+  }
